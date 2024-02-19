@@ -29,7 +29,8 @@ services:
     networks:
       node-nginx-net: # --net
     ipv4_address: 172.80.0.11
-    ports: -"80:80"
+    ports:
+      - "80:80"
     stdin_open: true # -i
     tty: true # -t
     image: nginx # imagen
