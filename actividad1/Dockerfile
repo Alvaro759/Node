@@ -1,8 +1,17 @@
 FROM node:14
-WORKDIR /usr/src/app
 
-COPY ./var/app .
+RUN mkdir -p /home/var/app/node_modules && chown -R node:node /home/node/app
+
+WORKDIR /home/var/app
+
+COPY package*.json ./
+
+USER node
+
 RUN npm install
 
+COPY --chown=node:node . .
+
 EXPOSE 8080
-RUN npm start
+
+CMD [ "node", "index.js" ] 
