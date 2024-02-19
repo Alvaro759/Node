@@ -15,9 +15,9 @@ services:
   mi-node:
     container_name: mi-node # --name
     networks:
-      - mongo-node-net:
+      -mongo-node-net:
         ipv4_address: 172.40.0.11
-      - node-nginx-net: # --net
+      -node-nginx-net: # --net
         ipv4_address: 172.80.0.10
     stdin_open: true # -i
     tty: true # -t
