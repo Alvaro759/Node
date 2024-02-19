@@ -1,8 +1,8 @@
 FROM node:14
 
-RUN mkdir -p /home/node/app/node_modules && chown -R node:node /home/node/app
+RUN mkdir -p /home/var/app/node_modules && chown -R node:node /home/var/app
 
-WORKDIR /home/node/app
+WORKDIR /home/var/app
 
 COPY package*.json ./
 
