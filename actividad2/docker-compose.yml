@@ -21,7 +21,8 @@ services:
           ipv4_address: 172.80.0.10
     stdin_open: true # -i
     tty: true # -t
-    image: nodejs # imagen
+    build:
+      context: .
 
   mi-nginx:
     container_name: mi-nginx # --name
