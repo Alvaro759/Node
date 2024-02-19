@@ -2,8 +2,8 @@ services:
   mi-mongo:
     container_name: mi-mongo # --name
     networks:
-      - mongo-node-net: # --net mi-mysql-red2
-          ipv4_address: 172.40.0.10
+      mongo-node-net: # --net
+        ipv4_address: 172.40.0.10
     volumes:
       - mongo-vol:/data/db # --mount
     environment:
@@ -27,8 +27,8 @@ services:
   mi-nginx:
     container_name: mi-nginx # --name
     networks:
-      - node-nginx-net: # --net
-          ipv4_address: 172.80.0.11
+      node-nginx-net: # --net
+        ipv4_address: 172.80.0.11
     ports: -"80:80"
     stdin_open: true # -i
     tty: true # -t
